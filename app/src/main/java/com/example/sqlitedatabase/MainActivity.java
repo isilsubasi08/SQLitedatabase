@@ -18,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
             SQLiteDatabase database=this.openOrCreateDatabase("Musicians",MODE_PRIVATE,null);
             database.execSQL("CREATE TABLE IF NOT EXISTS musicians (id INTEGER PRIMARY KEY,name VARCHAR,age INTEGER)");
 
-            database.execSQL("INSERT INTO musicians (name,age) VALUES ('James',50)");
-            database.execSQL("INSERT INTO musicians (name,age) VALUES ('Lars',40)");
-            database.execSQL("INSERT INTO musicians (name,age) VALUES ('Sevgi',48)");
+           // database.execSQL("INSERT INTO musicians (name,age) VALUES ('James',50)");
+           // database.execSQL("INSERT INTO musicians (name,age) VALUES ('Lars',40)");
+           // database.execSQL("INSERT INTO musicians (name,age) VALUES ('Sevgi',48)");
 
-            Cursor cursor=database.rawQuery("SELECT * FROM musicians",null);
+            Cursor cursor=database.rawQuery("SELECT * FROM musicians WHERE id=2",null);
 
 
             int nameIx=cursor.getColumnIndex("name");
