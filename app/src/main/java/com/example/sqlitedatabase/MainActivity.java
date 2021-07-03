@@ -22,9 +22,12 @@ public class MainActivity extends AppCompatActivity {
            // database.execSQL("INSERT INTO musicians (name,age) VALUES ('Lars',40)");
            // database.execSQL("INSERT INTO musicians (name,age) VALUES ('Sevgi',48)");
 
-            database.execSQL("UPDATE musicians SET age=89 WHERE name= 'Lars'");
+           // database.execSQL("UPDATE musicians SET age=89 WHERE name= 'Lars'");
 
-            Cursor cursor=database.rawQuery("SELECT * FROM musicians",null);
+            database.execSQL("DELETE FROM musicians WHERE id=2");
+
+            //Cursor cursor=database.rawQuery("SELECT * FROM musicians",null);
+            Cursor cursor=database.rawQuery("SELECT * FROM musicians WHERE name LIKE '%s'",null);
 
 
             int nameIx=cursor.getColumnIndex("name");
