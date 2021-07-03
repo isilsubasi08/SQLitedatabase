@@ -40,6 +40,18 @@ database.execSQL("CREATE TABLE IF NOT EXISTS musicians (name VARCHAR,age INTEGER
 -```
 ## Veritabanı oluşturma veri ekleme ve gösterme aşaması: <br>
 ![metin](https://github.com/isilay-subasi/SQLitedatabase/blob/main/images/SQLiteCreate.PNG)
+<br>
+## FİLTRELEME<br>
+-<b> "SELECT * FROM musicians WHERE id=2"<b> idsi 2 olanları getir anlamına gelmektedir.<br>
+ - "SELECT * FROM musicians WHERE name='James'" name i James olanları getir anlamındadır.
+ <br>
+ - database.execSQL("UPDATE musicians SET age=89 WHERE name= 'Lars'");  ismi Lars olan kişinin yaşını 89 olarak değiştir. Güncelleme yapmış olduk.
+ <br>
+ -  database.execSQL("DELETE FROM musicians WHERE id=2"); id'si 2 olanı sil.
+  <br>
+  - Cursor cursor=database.rawQuery("SELECT * FROM musicians WHERE name LIKE '%s'",null); LIKE %s sonu s harfi ile bitenleri getir demektir.
+
+
 
 
 
