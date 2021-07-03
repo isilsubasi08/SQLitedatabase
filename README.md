@@ -38,7 +38,8 @@ database.execSQL("CREATE TABLE IF NOT EXISTS musicians (name VARCHAR,age INTEGER
             cursor.close();
 
 -```
-
+## Veritabanı oluşturma veri ekleme ve gösterme aşaması: <br>
+![metin](https://github.com/isilay-subasi/SQLitedatabase/blob/main/images/SQLiteCreate.PNG)
 
 
 
